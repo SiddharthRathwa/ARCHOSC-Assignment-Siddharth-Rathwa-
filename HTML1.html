@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML CSS & JAVASCRIPT</title>
+    <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="Navbar">
+        <a href="index.html">Home</a>
+        <a href="github1.html">Introduction Github</a>
+        <a href="github2.html">Github CICD part-2</a>
+        <a href="HTML1.html">HTML CSS & Java Script</a>
+        <a href="#" class="dark-btn" id="darktoggle">Dark Mode</a>
+    </div>
+    <div class="box-container-github">
+        <p class="Github-head">HTML, CSS and JavaScript</p>
+        <p class="description" >In this lab, I learned hwo to separate my HTML, CSS and JavaScript into their own individual files and link them together. I also learned how to reference HTML elements by their class name in both CSS and JavaScript, how to build a navigation bar, and how to implement a darkmode toggle that saves the user preference across pages. </p>
+    </div>
+    <!-- picture folder -->
+    <div class="container-2">
+        <div class="img-block">
+            <img src="pictures/pictures.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Section 1</p>
+            <h2 class="section-heading"> Pre Lab- Pulling the Repository</h2>
+            <p class="section-text"> Before starting this lab I created a new folder in my local Workspace. I then opened the terminal inside it and pulled my GitHub repository down using the command line so I had an up to date local copy of all my files to work from. This is important because the workspace files are only available for 48 hours so pulling from GitHub ensures I always have the latest version of my work.</p>
+        </div>
+    </div>
+    <!-- css and script file -->
+    <div class="container-2">
+        <div class="img-block">
+            <img src="pictures/css and javascript.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Section 1- continued</p>
+            <h2 class="section-heading">Creating CSS and JavaScript Files</h2>
+            <p class="section-text">In Visual Studio Code I clicked File then New Text File to create a new empty file. I then clicked File then Save As and named it styles.css saving it in the same folder as my index.html file. I repeated this exact process again to create a second file named script.js. These two files are where all my styling and JavaScript code will be written separately from the HTML itself. Keeping them in separate files makes the code much easier to read, manage and update.</p>
+        </div>
+    </div>
+    <!-- Linking css and javaScript to html -->
+    <div class="container-2">
+         <div class=" img-block">
+            <img src="pictures/css and scripts.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Section 1- continued</p>
+            <h2 class="section-heading">Linking CSS and JavaScript to HTML</h2>
+            <p class="section-text">I then needed to connect my CSS and JavaScript files to my HTML so they could work together. To do this I added a link tag inside the head section of my HTML pointing to styles.css. I also added a script tag at the very bottom of the body section pointing to script.js. Without these two lines the HTML would not know that the CSS and JavaScript files exist and none of the styling or functionality would work.</p>
+        </div>
+    </div>
+    <!-- CSS Classes and Styling -->
+    <div class="container-2">
+         <div class=" img-block">
+            <img src="pictures/H1tag.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Section 2</p>
+            <h2 class="section-heading">CSS Styling by Tag</h2>
+            <p class="section-text">I opened my styles.css file and added CSS rules that target HTML elements by their tag name. For example adding a rule for h1 changes every h1 heading on the page. This is useful for applying consistent styling across all elements of the same type without having to style them individually. I could see the changes immediately when I refreshed the website in the browser.</p>
+        </div>
+    </div>
+    <div class="container-2">
+         <div class=" img-block">
+            <img src="pictures/console-result.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Section 2</p>
+            <h2 class="section-heading"> JavaScript Accessing Classes</h2>
+            <p class="section-text">I opened my script.js file and used document.querySelector to access my HTML elements by their class names. I stored them in variables called myName and myDescription. I then used console.log to print them to the developer console in the browser. I pressed F12 to open the developer tools and clicked Console to see the results. The console showed both elements which confirmed that JavaScript was correctly picking up the classes from the page.</p>
+        </div>
+    </div>
+    <div class="container-2">
+         <div class=" img-block">
+            <img src="pictures/navbar.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Section 3</p>
+            <h2 class="section-heading">Navbar</h2>
+            <p class="section-text">I needed a way to navigate between the different lab pages so I first created a simple ordered list of links in my index.html. I then converted this into a proper navigation bar using HTML and CSS. The navbar sits fixed at the top of every page and contains links to each lab. I styled it with a teal background colour and added hover effects so the links highlight when the mouse moves over them. The Home button has a highlighted background to show the current active page.</p>
+        </div>
+    </div>
+    <div class="container-2">
+         <div class=" img-block">
+            <img src="pictures/dark-mode.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Section 4</p>
+            <h2 class="section-heading">Dark Mode</h2>
+            <p class="section-text">The final task was to implement a dark mode toggle on my website. I added a button to the navbar in my HTML. In my CSS I created a dark-mode class on the body element with different background colour variables so when the class is applied the whole page changes colour. In my JavaScript I added an event listener to the button so when it is clicked it toggles the dark-mode class on and off. I also used localStorage to save the user preference so the dark mode stays consistent when moving between pages. I added a CSS transition so the colour change fades smoothly instead of switching instantly.</p>
+        </div>
+        
+    </div>
+    <div class="reflection-box">
+        <p class="section-tag">Reflection</p>
+        <h2 class="section-heading">What I Learned</h2>
+        <p class="section-text">In this lab I learned how to structure a website properly by separating HTML, CSS and JavaScript into their own individual files and linking them together. I also learned how to reference HTML elements by their class name in both CSS and JavaScript which is a fundamental technique used in all modern web development.
+
+        In industry keeping HTML, CSS and JavaScript in separate files is considered best practice. It makes code much easier to read, maintain and work on as a team. Features like dark mode are also used on most modern professional websites and understanding how JavaScript can interact with CSS classes to dynamically change the appearance of a page is a core skill for any front end developer.</p>
+    </div>
+    <!-- Footer page -->
+    <div class="footer-page">
+        <p> Siddharth Rathwa &mdash; ArchOSC Portfolio &mdash; University First Year <br /> Built with HTML, CSS and JavaScript</p>
+    </div>
+    <script src="Script.js"></script>
+</body>
+</html>

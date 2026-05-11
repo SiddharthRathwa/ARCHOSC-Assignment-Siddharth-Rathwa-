@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Github</title>
+    <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+      <div class="Navbar">
+        <a href="index.html">Home</a>
+        <a href="github1.html">Introduction Github</a>
+        <a href="github2.html">Github CICD part-2</a>
+        <a href="HTML1.html">HTML CSS & Java Script</a>
+        <a href="#" class="dark-btn" id="darktoggle">Dark Mode</a>
+    </div>
+    <div class="box-container-github">
+        <p class="Github-head">Introduction to Github</p>
+        <p class="description">Creating a local and remote repository, staging, commiting, pushing to github and <br />deploying to live website on github page</p>
+    </div>
+    <!-- lab folder -->
+    <div class="container-2">
+        <div class="img-block">
+        <img src="C:\Users\shiddarth\ARCHOSC-Assignment-Siddharth-Rathwa-\pictures\ArchOSC.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Section 1</p>
+            <h2 class="section-heading">Creating the lab folder</h2>
+            <p class="section-text">To start the lab I navigated to my local user profile on the machine through This PC → Windows (C:) → Users → my username → Workspace. The Workspace is a secure local storage area that only I can access. Inside it I created a new folder called "ArchOSC Assignment" by right clicking and selecting New then Folder.</p>
+        </div>
+    </div>
+    <!-- siddhath-folder -->
+    <div class="container-2">
+         <div class="img-block">
+        <img src="pictures/Archosc-siddharth.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Section 1 — Continued</p>
+        <h2 class="section-heading">My Local Workspace Folder</h2>
+        <p class="section-text">This is my personal workspace folder created on my own laptop. Inside it I created the ArchOSC Assignment folder which is where all my project files are stored locally. The workspace is only accessible on my machine and is not linked to OneDrive, which means Git and GitHub communicate much better from this local storage location.</p>
+        </div>
+    </div>
+    <!-- git init -->
+      <div class="container-2">
+        <div class="img-block">
+            <img src="pictures/git init.png">
+        </div>
+         <div class="text-block">
+        <p class="section-tag">Section 1 — Continued</p>
+        <h2 class="section-heading">Initialising Git </h2>
+        <p class="section-text">I right clicked inside my ArchOSC Assignment folder and selected "Open in Terminal" to open PowerShell. I then typed the command <strong>git init</strong> and pressed Enter. This sets up a new Git repository in that folder which means Git can now start tracking any files I create or change inside it. The terminal confirmed the repository was created successfully</p>
+        </div>
+    </div>
+    <!-- Archosc repo -->
+     <div class="container-2">
+        <div class="img-block">
+            <img src="pictures/Repositiory.png">
+        </div>
+        <div class="text-block">
+         <p class="section-tag">Section 2</p>
+         <h2 class="section-heading">Creating a github repositiory</h2>
+         <p class="section-text">I went to www.github.com and logged into my account. I clicked the green "New" button to create a new repository. I gave it the name ARCHOSC-Assignment, set it to Private, ticked the "Add a README file" option and set the .gitignore to Visual Studio. I then clicked "Create Repository" which created an online repository on GitHub that I would link my local work to</p>
+        </div>
+    </div>
+    <!--  git pull origin-->
+     <div class="container-2">
+        <div class="img-block">
+            <img src="pictures/Remote repository.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Section 3</p>
+            <h2 class="section-heading">Pushing to Github</h2>
+            <p class="section-text">In the terminal I typed <strong>git remote add origin</strong> followed by the link to my GitHub repository. This tells Git where the online repository is so the two can be connected. I then ran <strong>git pull origin main</strong> to download the files GitHub had already generated such as the README file. A sign in prompt appeared and I authorised access through my browser</p>
+        </div>
+    </div>
+    <!-- git website -->
+     <div class="container-2">
+        <div class="img-block">
+            <img src="pictures/website.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag"> Section 3 - continued</p>
+            <h2 class="section-heading">Creating a website</h2>
+            <p class="section-text">I opened Visual Studio Code and created a new file. I pasted in the provided HTML code which creates a
+            simple webpage showing a name in the centre of the screen. I replaced the placeholder text with my own
+            name then saved the file as index.html inside my ArchOSC Assignment folder. I double clicked the file to
+            open it in a browser and the webpage displayed correctly</p>
+        </div>
+     </div>
+    <!-- commit file -->
+     <div class="container-2">
+        <div class="img-block">
+            <img src="pictures/commit file.png">
+        </div>
+       <div class="text-block">
+        <p class="section-tag"> Section 3 - continued</p>
+        <h2 class="section-heading">Staging and committing</h2>
+        <p class="section-text">I went back to the terminal and typed git status to see what files Git had detected. The index. html file showed up in red meaning Git could see it but was not tracking it yet. I ran git add . to add all files to the
+        staging area. Running git status again showed the files in green confirming they were staged. I then ran git
+        commit -m "Initial commit" to save a snapshot of my work.
+</p>
+       </div>
+    </div>
+    <!-- deploymetns -->
+     <div class="container-2">
+        <div class="img-block">
+            <img src="pictures/deployment page.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Section 4</p>
+            <h2 class="section-heading">Deploying with github pages</h2>
+            <p class="section-text">I went to my GitHub repository and clicked Settings then selected Pages from the left menu. I changed my repository visibility to Public then set the deployment source to my main branch and clicked Save. After a
+            short wait GitHub generated a live link to my website. I clicked the link and my website opened in the
+            browser meaning it was now live and accessible from anywhere with an internet connection.</p>
+        </div>
+    </div>
+    <div class="reflection-box">
+        <p class="section-tag">Reflection</p>
+        <h2 class="section-heading">What I Learned</h2>
+        <p class="section-text">In this lab I learned how to use Git and GitHub to manage and store code. I created a local repository using the terminal, linked it to an online GitHub repository and pushed my files up to be stored remotely. I
+        also built a basic HTML website and deployed it live using GitHub Pages.
+        In industry version control using Git is a fundamental skill used by almost every software development
+        team in the world. It allows developers to track every change made to a codebase, collaborate with others
+        without overwriting each other's work and roll back to previous versions if something goes wrong.</p>
+    </div>
+    <!-- Footer page -->
+     <div class="footer-page">
+        <p> Siddharth Rathwa &mdash; ArchOSC Portfolio &mdash; University First Year <br /> Built with HTML, CSS and JavaScript</p>
+    </div>
+    <script src="Script.js"></script>
+</body>
+</html>

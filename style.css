@@ -1,0 +1,206 @@
+body{
+    background-color: white;
+    margin: 0;
+    transition: background-color 0.5s ease;
+    font-family: 'poppins', sans-serif;
+}
+
+body.dark-mode{
+    background-color: #264653;
+    transition: background-color 0.5s ease;
+}
+.dark-mode .Navbar a{
+    color: white;
+    transition: 0.5s ease;
+}
+.dark-mode .Navbar{
+    border-bottom: 3px solid #34ebcc;
+    background-color: #121212;
+    transition: 0.5s ease;
+}
+
+.Navbar{
+    background-color:white;
+    position: sticky;
+    top:0;
+    overflow: hidden;
+    border-bottom: 3px solid #264653 ;
+    padding-bottom: 10px ;
+    z-index: 999;
+}
+.Navbar a{
+    color: black;
+    float: left;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-size: 15px;
+    margin-left: 5px;
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+    
+}
+.Navbar a:hover{
+    background-color:#d4fffe;
+    color: darkblue;
+    border-radius: 5px 5px 5px 5px ;
+    transition: 0.3s ease ;
+}
+
+.Navbar a:first-child{
+    background-color:#34ebcc;
+    border-radius: 5px 5px 5px 5px ;
+    margin-left: 5px;
+    color: black;
+}
+.Navbar .dark-btn{
+    float: right;
+    color: darkblue;
+    border-color: darkblue;
+}
+.Navbar .dark-btn{
+    border:2px solid #34ebcc;
+    color:#34ebcc;
+    margin-right: 15px;
+    border-radius: 5px 5px 5px 5px ;
+    font-weight: bolder;
+}
+.Navbar .dark-btn:hover{
+    background-color: #34ebcc;
+    color: white;
+}
+.boder-line{
+    border: 5px solid black;
+}
+/* Box-content */
+.dark-mode .box-content{
+    background-color:#264653;
+    transition: background-color 0.5s ease;
+}
+.box-content{
+    background-color: #eaf8f8;
+    margin-top: 0;
+    display: block;
+    height: 705px;
+}
+
+.box-content .heading{
+    color: #34ebcc;
+    font-size: 120px;
+    margin-top: 10rem;
+    margin-bottom: 0;
+    margin-left: 8rem;
+    overflow: hidden;
+    position: absolute;
+}
+.box-content .heading-port{
+    color: #34ebcc;
+    font-size: 100px;
+    margin-top: 18rem;
+    margin-bottom: 0;
+    margin-left: 8rem;
+    position: absolute;
+}
+.box-content .name{
+    color: #34ebcc;
+    margin-left: 8.2rem;
+    font-size: 25px;
+    margin-top: 26rem;
+    font-weight: bold;
+    position: absolute;
+}
+.box-content .description{
+    margin-left: 8rem;
+    position: absolute;
+    margin-top: 29rem;
+}
+.dark-mode .description{
+    color: gray;
+}
+/* box-container */
+.box-container-github{
+    position: relative;
+    background-color: #d4fffe;
+    height: 15rem;
+    margin-top: 0;
+}
+.box-container-github .Github-head{
+    color: black;
+    font-size: 40px;
+    position:absolute;
+    margin: 0px;
+    margin-top: 4rem;
+    margin-left: 5rem;
+}
+.box-container-github .description{
+    position: absolute;
+    color: black;
+    margin-top: 8rem;
+    margin-left: 5rem;
+}
+.container-2{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    min-height: 300px;
+}
+.img-block{
+    width: 50%;
+    background-color: #e3fffe;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 2rem;
+    margin-left: 1rem;
+    border-radius: 10px;
+}
+.img-block img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    position: static;
+    margin: 0;
+}
+.text-block{
+    width: 50%;
+    background-color: white;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: centers;
+}
+/* section part */
+.section-tag{
+    color: #34ebcc;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.section-heading{
+    margin-top:0.5 rem;
+}
+.section-text{
+    text-align: justify;
+}
+/* Reflection-box */
+.reflection-box{
+    background-color: #e3fffe;
+    padding: 5rem 7rem;
+    margin: 1rem 1rem 1rem;
+    border-radius: 10px;
+}
+.footer-page{
+    background-color: #34ebcc;
+    height: 200px;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 20px;
+}
+.footer-page p{
+    margin: 100px;
+    display: flex;
+    justify-content: center;
+    color:#264653;
+}
