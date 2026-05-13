@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>OS Resource Allocation</title>
+</head>
+<body>
+    <div class="Navbar">
+        <a href="index.html">Home</a>
+        <a href="github1.html">Introduction Github</a>
+        <a href="github2.html">Github CICD part-2</a>
+        <a href="HTML1.html">HTML CSS & Java Script</a>
+        <a href="OSScheduling.html">OSScheduling</a>
+        <a href="OSmemory.html">OS Memory</a>
+        <a href="OSResource Allocation.html">OS Resource Allocation</a>
+        <a href="#" class="dark-btn" id="darktoggle">Dark Mode</a>
+    </div>
+    <div class="box-container-github">
+        <p class="Github-head">OS Resource Allocation</p>
+        <p class="description">In this lab I explored how resources are allocated on a computer system and how to analyse safe and unsafe states using the Banker's Algorithm. The Banker's Algorithm is a deadlock avoidance algorithm that determines whether a system is in a safe state by finding a safe sequence of process execution. I manually analysed three different resource configurations and implemented the Banker's Algorithm in C# to automatically determine system safety and output the safe sequence.</p>
+    </div>
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/OS Resource intro.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Task 1</p>
+            <h2 class="section-heading">Manual Analysis</h2>
+            <p class="section-text">The Banker's Algorithm determines if a system is in a safe state by finding a safe sequence which is an order in which all processes can complete without causing deadlock. With available resources R1=10, R2=5, R3=7 and the allocation equal to the maximum demand for all processes the need is 0 for every process. This means all processes can complete immediately and release their resources back to the available pool. The system is in a safe state. Safe Sequence: P1 -> P2 -> P3 -> P4 -> P5.</p>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/OS Resource-task1.png">
+        </div>
+        <div class="text-block">
+             <p class="section-tag">Task 1</p>
+            <h2 class="section-heading">Manual Analysis</h2>
+            <p class="section-text"></p>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/OS Resource-task1 -i.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Task 1</p>
+            <h2 class="section-heading">Manual Analysis</h2>
+            <p class="section-text"></p>
+        </div>
+    </div>
+    <!-- Task 2 -->
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/OS Resource-task 2.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Task 2</p>
+            <h2 class="section-heading">Increasing Resources</h2>
+            <p class="section-text">Resource R1 was increased from 10 to 12. With more R1 available the system has greater flexibility in choosing which processes to run first. After recalculating the need matrix and applying the Banker's Algorithm the system remains in a safe state. The extra 2 units of R1 allow more processes to satisfy their needs earlier in the execution sequence reducing waiting time and improving throughput. Safe Sequence: P4 -> P2 -> P5 -> P1 -> P3.</p>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/OS Resource-task 2-i.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Task 2</p>
+            <h2 class="section-heading">Increasing Resources</h2>
+            <p class="section-text"></p>
+        </div>
+    </div>
+    <!-- Task 3 -->
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/OS Resource-task 3.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Task 3</p>
+            <h2 class="section-heading">Further Increase</h2>
+            <p class="section-text">Resource R2 was also increased from 5 to 7. With both R1 and R2 increased the system has even more available resources making it easier to find a safe sequence. The same safe sequence P4 -> P2 -> P5 -> P1 -> P3 still works. More resources means a lower risk of deadlock, shorter safe sequences, better CPU utilisation and improved overall system performance. However in real systems adding resources has a cost as it means purchasing more hardware or memory.</p>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/OS Resource-task 3-ipng.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Task 3</p>
+            <h2 class="section-heading">Further Increase</h2>
+            <p class="section-text"></p>
+        </div>
+    </div>
+    <!-- Banker code -->
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/bankers-code.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Task 4</p>
+            <h2 class="section-heading">Banker's Algorithm code</h2>
+            <p class="section-text">I implemented the Banker's Algorithm in C# that takes user input for the number of processes and resource types. The program accepts the allocation matrix, maximum demand matrix and available resources as inputs. It then calculates the need matrix by subtracting the allocation from the maximum demand for each process. The safety algorithm checks each process to see if its need can be satisfied by the current available resources. If it can the process runs, completes and releases its resources back to the available pool.</p>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/bankers-code1.png">
+        </div>
+        <div class="text-block">
+             <p class="section-tag">Task 4</p>
+            <h2 class="section-heading">Banker's Algorithm code</h2>
+            <p class="section-text"></p>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/bankers-code2.png">
+        </div>
+        <div class="text-block">
+             <p class="section-tag">Task 4</p>
+            <h2 class="section-heading">Banker's Algorithm code</h2>
+            <p class="section-text"></p>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/bankers-code3.png">
+        </div>
+        <div class="text-block">
+              <p class="section-tag">Task 4</p>
+            <h2 class="section-heading">Banker's Algorithm code</h2>
+            <p class="section-text"></p>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/bankers-ouput.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Task 4</p>
+            <h2 class="section-heading">Banker's Algorithm Output</h2>
+            <p class="section-text">The program outputs whether the system is in a safe state or an unsafe state and displays the safe sequence if one exists. Running the program with the given inputs produced the safe sequence P4 -> P2 -> P5 -> P1 -> P3 confirming the system is in a safe state. The output also shows the need matrix and the step by step process of the safety algorithm finding which processes can run at each stage.</p>
+        </div>
+    </div>
+    <div class="reflection-box">
+        <p class="section-tag">Reflection</p>
+        <h2 class="section-heading">What I Learned</h2>
+        <p class="section-text">In this lab I learned how operating systems use the Banker's Algorithm to avoid deadlock by carefully managing resource allocation. A deadlock occurs when processes are waiting for resources held by each other and no process can continue. The Banker's Algorithm prevents this by only granting resource requests if the resulting state is still safe.
+
+        In industry resource management is critical for system reliability. Deadlocks can cause entire systems to freeze requiring a restart which can be catastrophic in real time systems such as aircraft control, medical equipment or financial trading platforms. The Banker's Algorithm shows how careful planning and analysis of resource allocation can prevent these situations. Understanding deadlock avoidance helps developers design more reliable and robust software systems that can handle resource contention gracefully without crashing or freezing.</p>
+    </div>
+    <!-- Footer page -->
+     <div class="footer-page">
+        <p> Siddharth Rathwa &mdash; ArchOSC Portfolio &mdash; University First Year <br /> Built with HTML, CSS and JavaScript</p>
+    </div>
+    <script src="Script.js"></script>
+</body>
+</html>

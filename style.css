@@ -4,9 +4,11 @@ body{
     transition: background-color 0.5s ease;
     font-family: 'poppins', sans-serif;
 }
-
+.dark-mode body{
+    background-color: #121212;
+}
 body.dark-mode{
-    background-color: #264653;
+    background-color: #121212;
     transition: background-color 0.5s ease;
 }
 .dark-mode .Navbar a{
@@ -18,18 +20,37 @@ body.dark-mode{
     background-color: #121212;
     transition: 0.5s ease;
 }
-
+.dark-mode .footer-page{
+    background-color: #264653;
+    color: white;
+    transition: 0.5s ease;
+     transition: 0.5s ease;
+}
+.dark-mode .footer-page p{
+    color: white;
+    transition: 0.5s ease;
+     transition: 0.5s ease;
+}
+.dark-mode .box-container-github{
+    background-color: #264653;
+     transition: 0.5s ease;
+}
+.dark-mode .box-container-github p{
+    color:#34ebcc;
+     transition: 0.5s ease;
+}
 .Navbar{
-    background-color:white;
+    background-color:#264653;
     position: sticky;
     top:0;
     overflow: hidden;
     border-bottom: 3px solid #264653 ;
     padding-bottom: 10px ;
     z-index: 999;
+    transition: background-color 0.5s ease, border-color 0.5s ease;
 }
 .Navbar a{
-    color: black;
+    color:#34ebcc;
     float: left;
     text-align: center;
     padding: 10px 12px;
@@ -42,8 +63,8 @@ body.dark-mode{
     
 }
 .Navbar a:hover{
-    background-color:#d4fffe;
-    color: darkblue;
+    background-color:#34ebcc;
+    color: white;
     border-radius: 5px 5px 5px 5px ;
     transition: 0.3s ease ;
 }
@@ -52,7 +73,7 @@ body.dark-mode{
     background-color:#34ebcc;
     border-radius: 5px 5px 5px 5px ;
     margin-left: 5px;
-    color: black;
+    color: #264653;
 }
 .Navbar .dark-btn{
     float: right;
@@ -124,6 +145,7 @@ body.dark-mode{
     background-color: #d4fffe;
     height: 15rem;
     margin-top: 0;
+    transition: background-color 0.5s ease;
 }
 .box-container-github .Github-head{
     color: black;
@@ -154,6 +176,12 @@ body.dark-mode{
     padding: 2rem;
     margin-left: 1rem;
     border-radius: 10px;
+    transition: background-color 0.5s ease;
+}
+.dark-mode .img-block{
+    background-color: #121212;
+    border: 2px solid #264653;
+     transition: 0.5s ease;
 }
 .img-block img{
     width: 100%;
@@ -163,13 +191,22 @@ body.dark-mode{
     position: static;
     margin: 0;
 }
+.dark-mode .img-block img{
+    transition: 0.5s ease;
+}
 .text-block{
     width: 50%;
     background-color: white;
     padding: 2rem 3rem;
     display: flex;
     flex-direction: column;
-    justify-content: centers;
+    justify-content: center;
+    border-radius: 10px;
+    transition: background-color 0.5s ease;
+}
+.dark-mode .text-block{
+    background-color: #121212;
+     transition: 0.5s ease;
 }
 /* section part */
 .section-tag{
@@ -177,6 +214,14 @@ body.dark-mode{
     text-transform: uppercase;
     font-weight: 600;
     margin-bottom: 0;
+}
+.dark-mode .section-heading{
+    color: gray;
+    transition: 0.5s ease;
+}
+.dark-mode .section-text{
+    color: gray;
+     transition: 0.5s ease;
 }
 .section-heading{
     margin-top:0.5 rem;
@@ -191,16 +236,25 @@ body.dark-mode{
     margin: 1rem 1rem 1rem;
     border-radius: 10px;
 }
+.dark-mode .reflection-box{
+    background-color:#264653;
+    transition: 0.5s ease;
+}
 .footer-page{
-    background-color: #34ebcc;
+    background-color:#264653;
     height: 200px;
     text-align: center;
     padding: 1.5rem;
     margin-top: 20px;
+    transition: background-color 0.5s ease;
 }
 .footer-page p{
     margin: 100px;
     display: flex;
     justify-content: center;
-    color:#264653;
+    color:#34ebcc;
+}
+.dark-mode .footer-page{
+    background-color: black;
+    transition: 0.5s ease;
 }

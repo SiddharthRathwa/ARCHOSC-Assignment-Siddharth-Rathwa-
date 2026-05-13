@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab content-2</title>
+    <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="Navbar">
+        <a href="index.html">Home</a>
+        <a href="github1.html">Introduction Github</a>
+        <a href="github2.html">Github CICD part-2</a>
+        <a href="HTML1.html">HTML CSS & Java Script</a>
+        <a href="OSScheduling.html">OSScheduling</a>
+        <a href="OSmemory.html">OS Memory</a>
+        <a href="OSResource Allocation.html">OS Resource Allocation</a>
+        <a href="#" class="dark-btn" id="darktoggle">Dark Mode</a>
+    </div>
+    <div class="box-container-github">
+        <p class="Github-head"> Github CICD part 2</p>
+        <p class="description">In this lab I learned how to move an existing repository into a new GitHub Classroom repository. I created two folders in my local Workspace — OriginalAssignment to hold my existing work and NewAssignment to hold the new GitHub Classroom repository. I then used Git commands to pull both repositories down locally, copied my files across and pushed everything to the new classroom repository.</p>
+    </div>
+     <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/NewAssignmentfolder.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Section 1</p>
+            <h2 class="section-heading">Creating the Folder</h2>
+            <p class="section-text">I navigated to my local Workspace and created two new folders. The first folder was called OriginalAssignment which would hold my existing portfolio repository from Lab 2. The second folder was called NewAssignment which would hold the new GitHub Classroom generated repository. Having both folders side by side on my local machine allowed me to easily copy files from one to the other.</p>
+        </div>
+    </div>
+     <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/Remote repository.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">section 2</p>
+            <h2 class="section-heading">Pulling the Original Repository</h2>
+            <p class="section-text">I opened the OriginalAssignment folder and right clicked to open the terminal inside it. Using the skills from the previous lab I added my original GitHub repository as the remote origin and pulled it down onto my local machine using git remote add origin followed by my repository link and then git pull origin main. This downloaded all of my portfolio files from Lab 2 into the OriginalAssignment folder giving me a local copy of everything I had previously pushed to GitHub.</p>
+        </div>
+    </div>
+     <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/ClassroomrRepo.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Section 3</p>
+            <h2 class="section-heading">Pulling the New Classroom Repositiory</h2>
+            <p class="section-text">I then opened the NewAssignment folder and right clicked to open the terminal inside it. This time I added the new GitHub Classroom generated repository as the remote origin and pulled it down. The GitHub Classroom repository was automatically generated when I accepted the assignment using the link provided by the lecturer. Once pulled down I copied all my portfolio files from the OriginalAssignment folder into the NewAssignment folder and pushed everything to the new classroom repository.</p>
+        </div>
+    </div>
+     <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/deployment page.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Section 4</p>
+            <h2 class="section-heading">Setting up GitHub Action</h2>
+            <p class="section-text">I went to my new classroom repository on GitHub and clicked Settings then Pages. I unpublished the existing site and changed the source from Branch to GitHub Actions. I then went to the Actions tab and clicked New Workflow followed by Set up a workflow yourself. I changed the filename from main.yml to deployment.yml. This is where I would write my YAML pipeline to automatically deploy my website to GitHub Pages.</p>
+        </div>
+    </div>
+     <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/writing-YAML.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Section 5</p>
+            <h2 class="section-heading">writing-YAML</h2>
+            <p class="section-text">I wrote a YAML pipeline called Deploy Website that runs automatically every time I push to the main branch. The pipeline has three main steps. The first step checks out the repository onto a fresh Ubuntu virtual machine using the actions/checkout@v4 action. The second step uploads the entire repository as an artifact using actions/upload-pages-artifact@v3. The third step deploys that artifact to GitHub Pages using actions/deploy-pages@v4. I also added permissions to allow the pipeline to read the repository and write to GitHub Pages. Once I committed the YAML file the pipeline ran automatically and deployed my website successfully.</p>
+        </div>
+    </div>
+     <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/created deployment.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Section 3</p>
+            <h2 class="section-heading">Github Action Running</h2>
+            <p class="section-text">This screenshot shows the GitHub Actions pipeline running successfully. The status shows Success and the projectdeploy job completed in 11 seconds. This confirms that every time I push changes to my repository the pipeline will automatically run and deploy the updated version of my website to GitHub Pages without me having to do anything manually.</p>
+        </div>
+    </div>
+     <div class="reflection-box">
+        <p class="section-tag">Reflection</p>
+        <h2 class="section-heading">What I Learned</h2>
+        <p class="section-text">In this lab I learned how to automate the deployment of a website using GitHub Actions and YAML. CI/CD stands for Continuous Integration and Continuous Deployment. It is a practice used in industry to automatically test and deploy code every time a change is made, reducing manual work and the risk of human error.
+
+        In industry CI/CD pipelines are used by almost every professional software development team. Companies like Google, Amazon and Microsoft use automated pipelines to deploy thousands of changes to their software every day. Understanding how to write YAML and set up GitHub Actions is a valuable skill that makes deploying software faster, more reliable and consistent. This lab gave me a real understanding of how professional deployment workflows operate in the real world.</p>
+    </div>
+    <!-- Footer page -->
+     <div class="footer-page">
+        <p> Siddharth Rathwa &mdash; ArchOSC Portfolio &mdash; University First Year <br /> Built with HTML, CSS and JavaScript</p>
+    </div>
+    <script src="Script.js"></script>
+</body>
+</html>

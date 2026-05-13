@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS Memory</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="Navbar">
+        <a href="index.html">Home</a>
+        <a href="github1.html">Introduction Github</a>
+        <a href="github2.html">Github CICD part-2</a>
+        <a href="HTML1.html">HTML CSS & Java Script</a>
+        <a href="OSScheduling.html">OSScheduling</a>
+        <a href="OSmemory.html">OS Memory</a>
+        <a href="OSResource Allocation.html">OS Resource Allocation</a>
+        <a href="#" class="dark-btn" id="darktoggle">Dark Mode</a>
+    </div>
+    <div class="box-container-github">
+        <p class="Github-head">OS Memory and Memory Management</p>
+        <p class="description">In this lab I explored key memory management concepts including virtual memory, paging, Translation Lookaside Buffers and memory interfacing. I learned how the Memory Management Unit maps virtual addresses to physical addresses using a page table. I worked through manual calculations for virtual to physical address translation, page frame calculations and TLB simulations. I also implemented a TLB simulation in C# and drew a memory interface diagram showing how a memory block connects to a processor using a decoder.</p>
+    </div>
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/Os memory-task1.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Task-1</p>
+            <h2 class="section-heading">Virtual Memory and paging</h2>
+            <p class="section-text">Virtual memory divides main memory into fixed size blocks called pages. A virtual address consists of a Virtual Page Number and an offset. Given a 4 bit VPN and 8 bit offset the number of virtual pages is 2 to the power of 4 which equals 16 pages and bytes per page is 2 to the power of 8 which equals 256 bytes. For virtual address 0x2C8 the VPN is 2 and offset is 0xC8. Looking up VPN 2 in the page map gives PPN equal to 4 so the physical address is 0x4C8.</p>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/Os memory-task-ii.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Task 1 - continued</p>
+            <h2 class="section-heading">virtual Memory and paging</h2>
+            <p class="section-text"></p>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/Os memory-task-iii.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Task 1 - continued </p>
+            <h2 class="section-heading">Virtual Memory and Paging</h2>
+            <p class="section-text"></p>
+        </div>
+    </div>
+    <!-- Task 2 -->
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/Os memory-task-2.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Task 2</p>
+            <h2 class="section-heading">Page Frames</h2>
+            <p class="section-text">The bottom 32K of main memory is divided into eight page frames of 4KB each. Each page frame covers a range of 4096 bytes. The missing values are calculated by adding 4095 to the start address of each frame since addresses begin at 0. The answers are A equals 32767, B equals 24575, C equals 16383 and D equals 4095.</p>
+        </div>
+    </div>
+    <!-- Task 3 -->
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/Os memory-task-3.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Task 3</p>
+            <h2 class="section-heading">Page Table and 32-bit virtual Address</h2>
+            <p class="section-text">For the 32 bit virtual address the first 20 bits represent the page number and the last 12 bits represent the offset. The virtual page referenced is Page 1. Looking up Page 1 in the page table gives a page frame value of 001 in binary which is 1 in decimal. The physical address is constructed by combining the page frame with the offset giving 0x117F.</p>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/Os memory-task-3-i.png">
+        </div>
+        <div class="text-block">
+           <p class="section-tag">Task 3 - continued</p>
+            <h2 class="section-heading">Page Table and 32-bit virtual Address</h2>
+            <p class="section-text"></p>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/Os memory-task-3-ii.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Task 3 - continued</p>
+            <h2 class="section-heading">Page Table and 32-bit virtual Address</h2>
+            <p class="section-text"></p>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/Os memory-task-3-iii.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Task 3 - continued</p>
+            <h2 class="section-heading">Page Table and 32-bit virtual Address</h2>
+            <p class="section-text"></p>
+        </div>
+    </div>
+    <!-- TLB section -->
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/TLB coding.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Task 4</p>
+            <h2 class="section-heading">TLB Simulation Code</h2>
+            <p class="section-text">A Translation Lookaside Buffer is a small fast cache that stores recent virtual to physical address translations. I implemented a TLB simulation in C# with a capacity of 4 entries. The simulation processes a sequence of virtual page number accesses and tracks hits and misses. A TLB hit occurs when the required VPN is already in the TLB. A TLB miss occurs when it is not found and requires a slower page table lookup instead.</p>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/TLB coding-1.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Task 4 - continued</p>
+            <h2 class="section-heading">TLB Simulation Code</h2>
+            <p class="section-text"></p>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/TLB coding-2.png">
+        </div>
+        <div class="text-block">
+             <p class="section-tag">Task 4 - continued</p>
+            <h2 class="section-heading">TLB Simulation Code</h2>
+            <p class="section-text"></p>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="img-block">
+        <img src="pictures/TLB-output.png">
+        </div>
+        <div class="text-block">
+            <p class="section-tag">Task 4 - TLB Simulation output</p>
+            <h2 class="section-heading">TLB Simulation Output</h2>
+            <p class="section-text">The simulation processes 15 virtual page accesses and tracks hits and misses. The hit ratio shows what percentage of accesses were found in the TLB without needing a page table lookup. A higher hit ratio means better performance as TLB lookups are much faster than page table lookups. The Task 4.1 calculations also show how many pages can reside in physical memory at one time and how many entries are in the page table.</p>
+        </div>
+    </div>
+     <div class="reflection-box">
+        <p class="section-tag">Reflection</p>
+        <h2 class="section-heading">What I Learned</h2>
+        <p class="section-text">In this lab I learned how operating systems manage memory using virtual memory and paging. The MMU maps virtual addresses to physical addresses using a page table and the TLB speeds this up by caching recent translations. Page faults occur when a required page is not in physical memory and must be loaded from disk.
+
+        In industry memory management is critical for system performance and stability. Virtual memory allows programs to use more memory than is physically available by using disk space as an extension of RAM. The TLB is essential for performance as without it every memory access would require a page table lookup which would slow the system significantly. Understanding these concepts helps developers write memory efficient programs and understand why memory management affects overall system performance.</p>
+    </div>
+    <!-- Footer page -->
+     <div class="footer-page">
+        <p> Siddharth Rathwa &mdash; ArchOSC Portfolio &mdash; University First Year <br /> Built with HTML, CSS and JavaScript</p>
+    </div>
+    <script src="Script.js"></script>
+</body>
+</html>
